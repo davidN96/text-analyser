@@ -21,11 +21,21 @@ export const analyse = path => {
     return emptyLines;
   };
 
+  const countWords = lines => {
+    const words = 0;
+    for (let line of lines) {
+      const arrayOfWords = line.split(" ");
+      words += arrayOfWords.length;
+    }
+    return words;
+  };
+
   const getInfo = () => {
     const lines = prepareLines();
     const info = {
       signs: 0,
       spaces: 0,
+      words: countWords(lines),
       emptyLines: countEmptyLines(lines),
       lines: lines.length
     };
