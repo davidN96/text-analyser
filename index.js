@@ -18,7 +18,27 @@ const prepareLines = () => {
   return trimmedLines;
 };
 
-const analyze = () => {
-  console.log(trimmedLines);
+const countEmptyLines = lines => {
+  const emptyLines = lines.filter(line => line.length === 0).length;
+  return emptyLines;
 };
+
+const analyze = () => {
+  const lines = prepareLines();
+  const info = {
+    signs: 0,
+    spaces: 0,
+    emptyLines: countEmptyLines(lines),
+    lines: lines.length
+  };
+
+  for (let line of lines) {
+    for (let i = 0; i < line.length; i++) {
+      if (line.charAt(i) === " ");
+    }
+  }
+  console.log(info);
+  return info;
+};
+
 analyze();
