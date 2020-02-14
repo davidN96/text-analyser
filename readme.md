@@ -33,7 +33,7 @@ To use this module you need to install latest version of Node on your computer.
 ##
 
 ```javascript
-import { analyse } from "text-analyzer";
+import { analyse } from "text-analyser";
 
 const pathToTxtFile = "txtFile.txt";
 

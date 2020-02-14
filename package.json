@@ -2,7 +2,7 @@
   "name": "text-analyser",
   "version": "1.0.3",
   "description": "",
-  "main": "textAnalyzer.js",
+  "main": "textAnalyser.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
