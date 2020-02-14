@@ -23,7 +23,7 @@ const countEmptyLines = lines => {
   return emptyLines;
 };
 
-const analyze = () => {
+export const analyze = () => {
   const lines = prepareLines();
   const info = {
     signs: 0,
@@ -34,11 +34,12 @@ const analyze = () => {
 
   for (let line of lines) {
     for (let i = 0; i < line.length; i++) {
-      if (line.charAt(i) === " ");
+      if (line.charAt(i) === " ") info.spaces++;
+      else info.signs++;
     }
   }
   console.log(info);
   return info;
 };
 
-analyze();
+export default analyze;
