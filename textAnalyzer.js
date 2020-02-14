@@ -1,5 +1,4 @@
 import minimist from "minimist";
-import colors from "colors";
 import lineReaderSync from "line-reader-sync";
 
 const argv = minimist(process.argv.slice(2));
