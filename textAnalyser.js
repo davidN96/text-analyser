@@ -24,7 +24,6 @@ export const analyse = path => {
     let words = 0;
     for (let line of lines) {
       const arrayOfWords = line.split(" ");
-      console.log(arrayOfWords);
       if (arrayOfWords.length === 1 && arrayOfWords[0] === "") continue;
       words += arrayOfWords.length;
     }

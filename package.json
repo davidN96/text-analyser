@@ -1,6 +1,6 @@
 {
-  "name": "text-analyser",
-  "version": "1.0.3",
+  "name": "text-analyzer",
+  "version": "1.0.4",
   "description": "",
   "main": "textAnalyser.js",
   "scripts": {
