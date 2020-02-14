@@ -19,7 +19,7 @@ To use this module you need to install latest version of Node on your computer.
 ##
 
 ```javascript
-    npm install text-analyzer
+    npm install text-analyser
 ```
 
 ##

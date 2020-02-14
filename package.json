@@ -1,6 +1,6 @@
 {
-  "name": "text-analyzer",
-  "version": "1.0.0",
+  "name": "text-analyser",
+  "version": "1.0.3",
   "description": "",
   "main": "textAnalyzer.js",
   "scripts": {
@@ -9,6 +9,19 @@
   "author": "David Nienajadlo <dawidnienajadlo96@gmail.com>",
   "license": "ISC",
   "type": "module",
+  "keywords": [
+    "word counter",
+    "signs counter",
+    "spaces counter",
+    "empty lines counter",
+    "signs",
+    "words",
+    "letters",
+    "text",
+    "txtFile",
+    "txt file",
+    "text analyse"
+  ],
   "dependencies": {
     "line-reader-sync": "^0.1.0"
   }
