@@ -3,15 +3,16 @@ import lineReaderSync from "line-reader-sync";
 export const analyse = path => {
   const lineReader = new lineReaderSync(path);
 
+  // remove eol terminator
   const prepareLines = () => {
     const arrayOfLines = lineReader.toLines();
 
     const trimmedLines = arrayOfLines.map((line, index) => {
-      if (index !== arrayOfLines.length - 1)
+      if (index !== arrayOfLines.length - 1) {
         line = line.substring(0, line.length - 1);
+      }
       return line;
     });
-
     return trimmedLines;
   };
 
@@ -21,31 +22,39 @@ export const analyse = path => {
   };
 
   const countWords = lines => {
-    let words = 0;
+    let linesAsString = lines.join(" ");
+    linesAsString = linesAsString.replace("  ", " ");
+    linesAsString = linesAsString.split(" ");
+    console.log(linesAsString);
+    return linesAsString.length;
+  };
+
+  const countSigns = lines => {
+    const stringWithChars = lines.join("").replace(" ", "");
+    return stringWithChars.length;
+  };
+
+  const countSpaces = lines => {
+    let spaces = 0;
     for (let line of lines) {
-      const arrayOfWords = line.split(" ");
-      if (arrayOfWords.length === 1 && arrayOfWords[0] === "") continue;
-      words += arrayOfWords.length;
+      if (line.length !== 0) {
+        let spacesColection = line.split("").filter(item => item === " ");
+        spaces += spacesColection.length;
+      }
     }
-    return words;
+    return spaces;
   };
 
   const getInfo = () => {
     const lines = prepareLines();
     const info = {
-      signs: 0,
-      spaces: 0,
+      signs: countSigns(lines),
+      spaces: countSpaces(lines),
       words: countWords(lines),
+      lines: lines.length,
       emptyLines: countEmptyLines(lines),
-      lines: lines.length
+      notEmptyLines: lines.length - countEmptyLines(lines)
     };
-
-    for (let line of lines) {
-      for (let i = 0; i < line.length; i++) {
-        if (line.charAt(i) === " ") info.spaces++;
-        else info.signs++;
-      }
-    }
     return info;
   };
 
