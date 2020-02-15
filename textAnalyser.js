@@ -22,16 +22,20 @@ export const analyse = path => {
   };
 
   const countWords = lines => {
-    let linesAsString = lines.join(" ");
-    linesAsString = linesAsString.replace("  ", " ");
-    linesAsString = linesAsString.split(" ");
-    console.log(linesAsString);
-    return linesAsString.length;
+    let linesAsArray = lines.join(" ");
+    linesAsArray = linesAsArray.replace("  ", " ");
+    linesAsArray = linesAsArray.split(" ");
+    let preparedArray = linesAsArray.filter(line => line.length !== 0);
+    return preparedArray.length;
   };
 
   const countSigns = lines => {
-    const stringWithChars = lines.join("").replace(" ", "");
-    return stringWithChars.length;
+    let signs = 0;
+    const arrayOfSigns = lines.join("").split("");
+    for (let letter of arrayOfSigns) {
+      if (letter !== " ") signs++;
+    }
+    return signs;
   };
 
   const countSpaces = lines => {
