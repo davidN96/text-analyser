@@ -54,4 +54,14 @@ Variable **informationsAboutTxtFile** shoud look like this:
 
 ##
 
-#### Thank you to use my module.
+### UML Diagram
+
+#### Sequence Diagram
+
+![Sequence Diagram](./umlDiagrams/sequenceDiagram.svg)
+
+##### Thank you for using this module. :blush:
+
+##
+
+## [Github Repository ](https://github.com/davidN96/text-analyser)
