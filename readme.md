@@ -49,7 +49,7 @@ const informationsAboutTxtFile = analyse(pathToTxtFile);
 Variable **informationsAboutTxtFile** shoud look like this:
 
 ```javascript
-    { signs: X, spaces: X, words: X, emptyLines: X, lines: X }
+    { signs: X, spaces: X, words: X, lines: X, emptyLines: X, notEmptyLines: X }
 ```
 
 ##
